@@ -258,7 +258,6 @@
         keys.forEach(k => html += `<td>${r[k] !== undefined && r[k] !== null ? r[k] : ''}</td>`); // Handle undefined/null values
         html += `
           <td>
-            <button class="btn btn-sm btn-info btn-view-details me-2">Ver</button>
             <button class="btn btn-sm btn-primary btn-edit me-2">Editar</button>
             <button class="btn btn-sm btn-danger btn-disable">Inactivar</button>
           </td>
@@ -266,7 +265,6 @@
       });
       html += '</tbody></table></div>';
       mainContent.innerHTML = html;
-      document.querySelectorAll('.btn-view-details').forEach(b => b.onclick = onViewDetailsFromTable); // Nueva función para la tabla
       document.querySelectorAll('.btn-edit').forEach(b => b.onclick = onEdit);
       document.querySelectorAll('.btn-disable').forEach(b => b.onclick = onDisable);
     }
